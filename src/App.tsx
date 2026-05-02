@@ -78,7 +78,21 @@ export default function App() {
   const [activePainting, setActivePainting] = useState<Painting | null>(null);
 
   const artistBio = "Welcome to my digital gallery. I am a curator and artist dedicated to the preservation of classical techniques in a modern world. This space is a collection of my inspirations and works that speak to the soul of French Impressionism. Through these frames, I invite you to explore the interplay of light and emotion.";
+  const handleShareWork = async () => {
+  try {
+    await navigator.clipboard.writeText(window.location.href);
+    alert("Link copied! You can now paste and send the message.");
+  } catch (err) {
+    console.error("Failed to copy link:", err);
+  }
+};
 
+const handleRequestDetails = (paintingTitle: string) => {
+  const email = "miriamjk567@gmail.com";
+  const subject = encodeURIComponent(`Inquiry: ${paintingTitle}`);
+  const body = encodeURIComponent(`I am interested in learning more about "${paintingTitle}" in your gallery.`);
+  window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+};
   return (
     <div className="min-h-screen font-serif museum-wall relative pb-16 sm:pb-20 selection:bg-[#e6c278] selection:text-[#5c1616]">
       <div className="vignette" />
@@ -312,13 +326,19 @@ export default function App() {
                   </div>
 
                   <div className="mt-6 sm:mt-12 flex flex-col sm:flex-row gap-3 sm:gap-4">
-                    <button className="w-full sm:flex-1 px-6 sm:px-10 py-3 sm:py-4 bg-[#e6c278] text-[#5c1616] text-[11px] tracking-[0.25em] uppercase hover:brightness-110 transition-all font-sans font-bold">
-                      Request Details
-                    </button>
-                    <button className="w-full sm:flex-1 px-6 sm:px-10 py-3 sm:py-4 border border-white/20 text-white text-[11px] tracking-[0.25em] uppercase hover:bg-white hover:text-black transition-all font-sans">
-                      Share Work
-                    </button>
-                  </div>
+  <button 
+    onClick={() => handleRequestDetails(activePainting.title)}
+    className="w-full sm:flex-1 px-6 sm:px-10 py-3 sm:py-4 bg-[#e6c278] text-[#5c1616] text-[11px] tracking-[0.25em] uppercase hover:brightness-110 transition-all font-sans font-bold"
+  >
+    Request Details
+  </button>
+  <button 
+    onClick={handleShareWork}
+    className="w-full sm:flex-1 px-6 sm:px-10 py-3 sm:py-4 border border-white/20 text-white text-[11px] tracking-[0.25em] uppercase hover:bg-white hover:text-black transition-all font-sans"
+  >
+    Share Work
+  </button>
+</div>
                 </div>
               </motion.div>
             </div>
