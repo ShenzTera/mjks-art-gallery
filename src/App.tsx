@@ -118,7 +118,7 @@ export default function App() {
 
           {/* Bio Text */}
           <div className="flex-1 text-left">
-            <span className="text-[10px] tracking-[0.5em] uppercase text-[#e6c278] block mb-4 font-sans opacity-70">RESIDENT ARTIST</span>
+            <span className="text-[10px] tracking-[0.5em] uppercase text-[#e6c278] block mb-4 font-sans opacity-70">ARTIST</span>
             <h1 className="text-6xl md:text-8xl font-instrument italic mb-6 tracking-tight text-[#f4ece1]">
             Miriam Joseph
             </h1>
@@ -177,7 +177,7 @@ export default function App() {
                <span className="text-[10px] tracking-[0.4em] uppercase text-[#e6c278] block mb-4 font-sans opacity-70">CORRESPONDENCE</span>
                <h2 className="text-5xl md:text-6xl font-display italic mb-8 text-[#f4ece1]">Get in Touch</h2>
                <p className="text-lg md:text-xl text-[#f4ece1]/70 leading-relaxed font-light italic mb-12">
-                 For inquiries regarding commissions, gallery exhibitions, or private collection acquisitions, I invite you to reach out.
+                 For inquiries regarding any of my paintings, I invite you to reach out.
                </p>
 
                <div className="space-y-6">
@@ -185,19 +185,19 @@ export default function App() {
                     <div className="w-10 h-10 rounded-full border border-[#e6c278]/30 flex items-center justify-center group-hover:bg-[#e6c278] group-hover:text-[#5c1616] transition-all">
                       <Mail size={16} />
                     </div>
-                    <span className="text-[#f4ece1]/80 font-sans tracking-widest text-sm">studio@your-gallery.com</span>
+                    <span className="text-[#f4ece1]/80 font-sans tracking-widest text-sm">miriamjk567@gmail.com</span>
                  </div>
                  <div className="flex items-center gap-4 group">
                     <div className="w-10 h-10 rounded-full border border-[#e6c278]/30 flex items-center justify-center group-hover:bg-[#e6c278] group-hover:text-[#5c1616] transition-all">
                       <Phone size={16} />
                     </div>
-                    <span className="text-[#f4ece1]/80 font-sans tracking-widest text-sm">+44 20 7946 0123</span>
+                    <span className="text-[#f4ece1]/80 font-sans tracking-widest text-sm">+971 55 507 8487</span>
                  </div>
                  <div className="flex items-center gap-4 group">
                     <div className="w-10 h-10 rounded-full border border-[#e6c278]/30 flex items-center justify-center group-hover:bg-[#e6c278] group-hover:text-[#5c1616] transition-all">
                       <MapPin size={16} />
                     </div>
-                    <span className="text-[#f4ece1]/80 font-sans tracking-widest text-sm">Mayfair, London, United Kingdom</span>
+                    <span className="text-[#f4ece1]/80 font-sans tracking-widest text-sm">Bangalore, India</span>
                  </div>
                </div>
              </div>
