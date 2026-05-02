@@ -220,11 +220,17 @@ export default function App() {
                  </div>
                 
                  {/* 1. Add the anchor tag wrapper */}
-<a href="mailto:miriamjk567@gmail.com?subject=Painting Inquiry">
-  <button className="w-full md:w-auto px-12 py-4 bg-[#e6c278] text-[#5c1616] text-[11px] tracking-[0.3em] uppercase font-bold hover:brightness-110 transition-all flex items-center justify-center gap-3">
-    <Send size={14} /> Send Inquiry
-  </button>
-</a>
+              <a 
+                 href="mailto:shenznazeer@gmail.com?subject=Gallery Inquiry" 
+                       onClick={(e) => e.stopPropagation()}
+               >
+                 <button 
+                    type="button" 
+                        className="w-full md:w-auto px-12 py-4 bg-[#e6c278] text-[#5c1616] text-[11px] tracking-[0.3em] uppercase font-bold hover:brightness-110 transition-all flex items-center justify-center gap-3"
+                 >
+                    <Send size={14} /> Send Inquiry
+                 </button>
+              </a>
                </form>
              </div>
            </div>
