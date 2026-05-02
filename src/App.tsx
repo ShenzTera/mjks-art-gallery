@@ -351,7 +351,7 @@ const handleRequestDetails = (paintingTitle: string) => {
           <span className="text-serif italic text-xs font-bold">L</span>
         </div>
         <p className="text-[9px] tracking-[0.5em] uppercase font-light font-sans mb-2">• MJKs Virtual Gallery •</p>
-        <p className="text-[8px] tracking-[0.3em] uppercase opacity-50 font-sans italic">Designed By Shenz</p>
+        <p className="text-[8px] tracking-[0.3em] uppercase opacity-50 font-sans italic">Designed By Shenz @2026</p>
       </footer>
     </div>
   );
