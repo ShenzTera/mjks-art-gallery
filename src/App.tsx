@@ -314,8 +314,8 @@ export default function App() {
         <div className="w-10 h-10 border border-[#e6c278]/30 rounded-full mx-auto mb-6 flex items-center justify-center translate-y-0 hover:-translate-y-1 transition-transform cursor-pointer">
           <span className="text-serif italic text-xs font-bold">L</span>
         </div>
-        <p className="text-[9px] tracking-[0.5em] uppercase font-light font-sans mb-2">MJKs Virtual Gallery • Classical Archive</p>
-        <p className="text-[8px] tracking-[0.3em] uppercase opacity-50 font-sans italic">Curated Excellence since 1899</p>
+        <p className="text-[9px] tracking-[0.5em] uppercase font-light font-sans mb-2">• MJKs Virtual Gallery •</p>
+        <p className="text-[8px] tracking-[0.3em] uppercase opacity-50 font-sans italic">Designed By Shenz</p>
       </footer>
     </div>
   );
