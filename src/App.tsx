@@ -221,7 +221,7 @@ export default function App() {
                 
                  {/* 1. Add the anchor tag wrapper */}
               <a 
-                 href="mailto:shenznazeer@gmail.com?subject=Gallery Inquiry" 
+                 href="mailto:miriamjk567@gmail.com?subject=Gallery Inquiry" 
                        onClick={(e) => e.stopPropagation()}
                >
                  <button 
