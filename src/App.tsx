@@ -116,8 +116,8 @@ export default function App() {
           {/* Bio Text */}
           <div className="flex-1 text-left">
             <span className="text-[10px] tracking-[0.5em] uppercase text-[#e6c278] block mb-4 font-sans opacity-70">RESIDENT ARTIST</span>
-            <h1 className="text-6xl md:text-8xl font-display italic mb-6 tracking-tight text-[#f4ece1]">
-              MJK
+            <h1 className="text-6xl md:text-8xl font-instrument italic mb-6 tracking-tight text-[#f4ece1]">
+            MJK
             </h1>
             
             <div className="max-w-2xl">
