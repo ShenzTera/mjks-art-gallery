@@ -215,9 +215,12 @@ export default function App() {
                    <label className="block text-[9px] uppercase tracking-widest text-[#e6c278] mb-2 font-sans opacity-50">Your Inquiry</label>
                    <textarea rows={4} className="w-full bg-white/5 border border-white/10 px-4 py-3 text-sm focus:outline-none focus:border-[#e6c278]/50 transition-colors italic font-light resize-none" placeholder="I am interested in..."></textarea>
                  </div>
-                 <button className="w-full md:w-auto px-12 py-4 bg-[#e6c278] text-[#5c1616] text-[11px] tracking-[0.3em] uppercase font-bold hover:brightness-110 transition-all flex items-center justify-center gap-3">
-                   <Send size={14} /> Send Inquiry
-                 </button>
+                 {/* Wrap the button in this <a> tag */}
+                 <a href="mailto:your-email@example.com?subject=Gallery Inquiry">
+                  <button className="w-full md:w-auto px-12 py-4 bg-[#e6c278] text-[#5c1616] text-[11px] tracking-[0.3em] uppercase font-bold hover:brightness-110 transition-all flex items-center justify-center gap-3">
+                    <Send size={14} /> Send Inquiry
+                  </button>
+                 </a>
                </form>
              </div>
            </div>
