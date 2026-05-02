@@ -16,20 +16,27 @@
   --header-bg: rgba(74, 17, 17, 0.5);
 }
 
+/* Prevent horizontal scroll on all devices */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   background-color: var(--museum-red);
   color: var(--museum-text);
-  overflow-x: hidden;
+  /* Improve tap targets and touch scrolling on mobile */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 /* Custom ornate gold frame styles - Premium Realistic Edition */
 .gold-frame {
   position: relative;
   background: #000;
-  padding: 1.5rem;
+  padding: 0.75rem;       /* Tighter padding on mobile */
   border-radius: 2px;
-  /* Multi-layered border for realism */
-  border: 12px solid transparent;
+  border: 8px solid transparent;
   border-image: linear-gradient(
     135deg, 
     #b8860b 0%, 
@@ -43,26 +50,45 @@ body {
     inset 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
+/* Slightly larger frame on tablet+ */
+@media (min-width: 640px) {
+  .gold-frame {
+    padding: 1rem;
+    border-width: 10px;
+  }
+}
+
+/* Full-size frame on desktop */
+@media (min-width: 1024px) {
+  .gold-frame {
+    padding: 1.5rem;
+    border-width: 12px;
+  }
+}
+
 .gold-frame::before {
   content: "";
   position: absolute;
-  inset: -16px;
-  border: 4px solid #8b4513; /* Wood secondary frame */
+  inset: -12px;
+  border: 3px solid #8b4513;
   pointer-events: none;
   z-index: -1;
   box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+}
+
+@media (min-width: 1024px) {
+  .gold-frame::before {
+    inset: -16px;
+    border-width: 4px;
+  }
 }
 
 .gold-frame::after {
   content: "";
   position: absolute;
   inset: -4px;
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Inner bevel highlight */
+  border: 1px solid rgba(255, 255, 255, 0.2);
   pointer-events: none;
-}
-
-.gold-frame-ring {
-  /* Removed old ring class in favor of the new pseudo-element approach in .gold-frame */
 }
 
 .museum-wall {
@@ -70,23 +96,47 @@ body {
   background-size: 40px 40px;
 }
 
-/* Atmospheric Vignette */
+/* Atmospheric Vignette - reduced on mobile for performance */
 .vignette {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.6);
   z-index: 40;
 }
 
-/* Decorative border for the whole page */
+@media (min-width: 768px) {
+  .vignette {
+    box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* Page trim - hidden on mobile to save space */
 .page-trim {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 20px solid rgba(0,0,0,0.1);
-  pointer-events: none;
-  z-index: 50;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .page-trim {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 20px solid rgba(0,0,0,0.1);
+    pointer-events: none;
+    z-index: 50;
+  }
+}
+
+/* Ensure inputs are readable and don't zoom on iOS */
+input, textarea {
+  font-size: 16px !important; /* Prevents iOS auto-zoom on focus */
+}
+
+@media (min-width: 640px) {
+  input, textarea {
+    font-size: 0.875rem !important; /* Restore sm size on larger screens */
+  }
 }
