@@ -86,7 +86,9 @@ export default function App() {
       
       {/* Header / Navigation Based on Theme */}
       <header className="relative z-50 flex justify-between items-center px-12 py-6 border-b border-white/10 bg-[#4a1111]/50 backdrop-blur-md">
-        <div className="text-xs tracking-[0.3em] uppercase opacity-70 font-sans">MJKs Virtual Gallery</div>
+        <div className="text-xs tracking-[0.3em] uppercase opacity-70 font-sans flex items-center gap-2">
+         🎨 <span>MJKs Virtual Gallery</span>
+        </div>
         <nav className="hidden md:flex gap-8 text-[10px] uppercase tracking-[0.2em] font-sans">
           <a href="#" className="hover:text-[#e6c278] transition-colors">Exhibitions</a>
           <a href="#contact" className="hover:text-[#e6c278] transition-colors">Contact</a>
