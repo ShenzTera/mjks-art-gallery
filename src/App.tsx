@@ -102,7 +102,7 @@ export default function App() {
            initial={{ opacity: 0, y: 20 }}
            animate={{ opacity: 1, y: 0 }}
            transition={{ duration: 1 }}
-           className="flex flex-col md:flex-row items-center gap-12 md:gap-20 border-l-2 border-[#d4af37] pl-8 md:pl-16 font-serif"
+           className="flex flex-col md:flex-row items-center gap-12 md:gap-20 border-l-2 border-[#d4af37] pl-8 md:pl-16 font-instrument"
         >
           {/* My Picture */}
           <div className="w-full md:w-1/3">
