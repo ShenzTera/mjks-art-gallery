@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+:root {
+  --museum-red: #5c1616;
+  --museum-text: #f4ece1;
+  --museum-gold: #e6c278;
+  --museum-gold-dark: #d4af37;
+  --header-bg: rgba(74, 17, 17, 0.5);
+}
+
+body {
+  background-color: var(--museum-red);
+  color: var(--museum-text);
+  overflow-x: hidden;
+}
+
+/* Custom ornate gold frame styles - Premium Realistic Edition */
+.gold-frame {
+  position: relative;
+  background: #000;
+  padding: 1.5rem;
+  border-radius: 2px;
+  /* Multi-layered border for realism */
+  border: 12px solid transparent;
+  border-image: linear-gradient(
+    135deg, 
+    #b8860b 0%, 
+    #daa520 25%, 
+    #fdb931 50%, 
+    #daa520 75%, 
+    #b8860b 100%
+  ) 1;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.7),
+    inset 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.gold-frame::before {
+  content: "";
+  position: absolute;
+  inset: -16px;
+  border: 4px solid #8b4513; /* Wood secondary frame */
+  pointer-events: none;
+  z-index: -1;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+}
+
+.gold-frame::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Inner bevel highlight */
+  pointer-events: none;
+}
+
+.gold-frame-ring {
+  /* Removed old ring class in favor of the new pseudo-element approach in .gold-frame */
+}
+
+.museum-wall {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.2) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+/* Atmospheric Vignette */
+.vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.8);
+  z-index: 40;
+}
+
+/* Decorative border for the whole page */
+.page-trim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 20px solid rgba(0,0,0,0.1);
+  pointer-events: none;
+  z-index: 50;
+}
