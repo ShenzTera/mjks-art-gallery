@@ -210,7 +210,7 @@ const handleRequestDetails = (paintingTitle: string) => {
                   <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#e6c278]/30 flex items-center justify-center flex-shrink-0 group-hover:bg-[#e6c278] group-hover:text-[#5c1616] transition-all">
                     <Phone size={15} />
                   </div>
-                  <span className="text-[#f4ece1]/80 font-sans tracking-wider text-xs sm:text-sm">+971 55 507 8487</span>
+                  <span className="text-[#f4ece1]/80 font-sans tracking-wider text-xs sm:text-sm">+91 81 2907 4012</span>
                 </div>
                 <div className="flex items-center gap-3 sm:gap-4 group">
                   <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#e6c278]/30 flex items-center justify-center flex-shrink-0 group-hover:bg-[#e6c278] group-hover:text-[#5c1616] transition-all">
