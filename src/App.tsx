@@ -117,17 +117,8 @@ const CLOTHING: ClothingItem[] = [
     title: 'Hoodie',
     year: '2025',
     description: 'A flowing chiffon scarf printed with the warm palette of Impression, Sunrise. Versatile enough for everyday wear or special occasions.',
-    imageUrl: './clothing/black-hoodie.jpg',
+    images: ['./clothing/grey-hoodie.jpg','./clothing/black-hoodie.jpg'],
     size: 'S - L',
-    material: 'Wool, Hand-painted',
-  },
-  {
-    id: 'jacket-giverny',
-    title: 'Hoodie',
-    year: '2025',
-    description: 'A structured linen jacket with hand-embroidered botanical motifs drawn from Monet\'s garden sketches. Limited to 12 pieces worldwide.',
-    imageUrl: './clothing/grey-hoodie.jpg',
-    size: 'S – L',
     material: 'Wool, Hand-painted',
   },
 ];
@@ -514,7 +505,7 @@ export default function App() {
             Art you can wear — each piece is inspired by the paintings in this gallery, crafted in limited quantities.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-15 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-15 items-start">
           {CLOTHING.map((item, index) => {
             const imgs = getImages(item);
             const hasSlides = imgs.length > 1;
