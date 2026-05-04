@@ -140,3 +140,19 @@ input, textarea {
     font-size: 0.875rem !important; /* Restore sm size on larger screens */
   }
 }
+
+/* Clothing card — thin border frame, no ornate gold */
+.clothing-card {
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.clothing-card:hover {
+  border-color: rgba(230, 194, 120, 0.5);
+}
+
+/* Clothing modal image frame */
+.clothing-frame {
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
