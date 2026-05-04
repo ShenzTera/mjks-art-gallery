@@ -607,12 +607,87 @@ export default function App() {
       </section>
 
       {/* ── MODALS ── */}
-      <AnimatePresence>
-        {activePainting && <PaintingModal item={activePainting} onClose={() => setActivePainting(null)} />}
-      </AnimatePresence>
-      <AnimatePresence>
-        {activeClothing && <ClothingModal item={activeClothing} onClose={() => setActiveClothing(null)} />}
-      </AnimatePresence>
+     <AnimatePresence>
+  {activePainting && (
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-[60] bg-black/95 backdrop-blur-sm overflow-y-auto"
+    >
+      <div className="relative w-full min-h-full p-4 sm:p-6 md:p-12 flex flex-col md:flex-row items-center justify-center gap-6 sm:gap-8 md:gap-16">
+        
+        {/* Close Button - Resets slide index on close */}
+        <button 
+          onClick={() => { setActivePainting(null); setCurrentSlide(0); }}
+          className="fixed top-4 right-4 z-[70] p-2 bg-stone-800 rounded-full text-stone-300 hover:text-white transition-colors"
+        >
+          <X size={20} />
+        </button>
+
+        {/* Multi-Image Container */}
+        <div className="w-full md:flex-1 flex flex-col items-center justify-center pt-10 md:pt-0">
+          <div className="gold-frame w-full max-w-sm md:max-w-full relative group">
+            <img 
+              src={activePainting.imageUrls[currentSlide]} 
+              alt={activePainting.title}
+              className="w-full max-h-[45vh] md:max-h-[70vh] object-contain block"
+            />
+            
+            {/* Slide Navigation (Visible on Mobile & Hover on Desktop) */}
+            {activePainting.imageUrls.length > 1 && (
+              <>
+                <div className="absolute inset-0 flex items-center justify-between px-2">
+                  <button 
+                    onClick={() => setCurrentSlide(prev => prev > 0 ? prev - 1 : activePainting.imageUrls.length - 1)}
+                    className="p-3 bg-black/60 rounded-full text-white backdrop-blur-md border border-white/10"
+                  >
+                    ←
+                  </button>
+                  <button 
+                    onClick={() => setCurrentSlide(prev => prev < activePainting.imageUrls.length - 1 ? prev + 1 : 0)}
+                    className="p-3 bg-black/60 rounded-full text-white backdrop-blur-md border border-white/10"
+                  >
+                    →
+                  </button>
+                </div>
+                
+                {/* Visual Dots for Navigation */}
+                <div className="flex gap-2 mt-4 justify-center">
+                  {activePainting.imageUrls.map((_, idx) => (
+                    <div 
+                      key={idx} 
+                      className={`h-1.5 rounded-full transition-all ${currentSlide === idx ? 'bg-[#e6c278] w-4' : 'bg-white/20 w-1.5'}`} 
+                    />
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+
+        {/* Info Panel */}
+        <div className="w-full md:flex-1 md:max-w-xl pb-10">
+          <div className="bg-black/40 p-6 sm:p-10 border border-white/10 backdrop-blur-md">
+            <h2 className="text-3xl md:text-5xl font-display italic mb-4 text-[#e6c278]">{activePainting.title}</h2>
+            <p className="text-[#f4ece1]/80 leading-relaxed italic font-light">
+              {activePainting.description}
+            </p>
+
+            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+              <button className="flex-1 py-4 bg-[#e6c278] text-[#5c1616] text-[10px] tracking-[0.2em] font-bold uppercase hover:bg-white transition-colors">
+                Request Details
+              </button>
+              <button className="flex-1 py-4 border border-white/20 text-white text-[10px] tracking-[0.2em] uppercase hover:bg-white/10 transition-colors">
+                Share Work
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  )}
+</AnimatePresence>
 
       {/* ── FOOTER ── */}
       <footer className="mt-20 sm:mt-28 md:mt-40 pb-10 sm:pb-12 text-center text-[#e6c278]/40 relative z-10">
