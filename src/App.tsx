@@ -42,62 +42,94 @@ interface ClothingItem {
 
 const PAINTINGS: GalleryItem[] = [
   {
-    id: 'water-lilies',
-    title: 'Water Lilies',
-    year: '1919',
+    id: 'karl',
+    title: 'Karl or something',
+    year: '-',
     description: 'Part of the famous Nymphéas series, these paintings depict Monet\'s flower garden at Giverny. They were the main focus of his artistic production during the last thirty years of his life.',
     // Single image example:
-    imageUrl: './paintings/water-lilies.jpg',
+    imageUrl: './paintings/karl.jpg',
     // Slideshow example (comment out imageUrl above and uncomment below):
     // images: ['./paintings/water-lilies-1.jpg', './paintings/water-lilies-2.jpg', './paintings/water-lilies-3.jpg'],
     dimensions: '200 x 201 cm',
-    medium: 'Oil on canvas',
+    medium: 'Charcoal on paper',
   },
   {
-    id: 'impression-sunrise',
-    title: 'Impression, Sunrise',
-    year: '1872',
+    id: 'Turban',
+    title: 'Turban Man',
+    year: '-',
+    description: 'Part of the famous Nymphéas series, these paintings depict Monet\'s flower garden at Giverny. They were the main focus of his artistic production during the last thirty years of his life.',
+    // Single image example:
+    imageUrl: './paintings/turban.jpg',
+    // Slideshow example (comment out imageUrl above and uncomment below):
+    // images: ['./paintings/water-lilies-1.jpg', './paintings/water-lilies-2.jpg', './paintings/water-lilies-3.jpg'],
+    dimensions: '200 x 201 cm',
+    medium: 'Charcoal on paper',
+  },
+  {
+    id: 'Ring',
+    title: 'The Ring',
+    year: '-',
     description: 'This painting is credited with inspiring the name of the Impressionist movement. It depicts the port of Le Havre, Monet\'s hometown, at sunrise.',
-    imageUrl: './paintings/impression-sunrise.jpg',
+    imageUrl: './paintings/ring.jpg',
     dimensions: '48 x 63 cm',
-    medium: 'Oil on canvas',
+    medium: 'Charcoal on paper',
   },
   {
-    id: 'woman-parasol',
-    title: 'Woman with a Parasol',
-    year: '1875',
+    id: 'Chimp',
+    title: 'Chimpanze',
+    year: '-',
     description: 'Also known as Madame Monet and Her Son, this painting captures a casual family moment on a breezy summer day.',
-    imageUrl: './paintings/woman-parasol.jpg',
+    imageUrl: './paintings/chimp.jpg',
     dimensions: '100 x 81 cm',
-    medium: 'Oil on canvas',
+    medium: 'Charcoal on paper',
   },
   {
-    id: 'san-giorgio',
-    title: 'San Giorgio Maggiore at Dusk',
-    year: '1908',
+    id: 'walter',
+    title: 'Breaking Bad',
+    year: '-',
     description: 'A glowing sunset view of the island monastery in Venice. Monet used a brilliant palette of yellows, oranges, and purples to capture the atmospheric light.',
-    imageUrl: './paintings/san-giorgio.jpg',
+    imageUrl: './paintings/walter.jpg',
     dimensions: '65 x 92 cm',
-    medium: 'Oil on canvas',
+    medium: 'Charcoal on paper',
   },
   {
-    id: 'the-magpie',
-    title: 'The Magpie',
+    id: 'ash',
+    title: '2 Girls I think',
     year: '1869',
     description: 'One of the first Impressionist snowscapes, Monet focuses on the interplay of light and shadow on the snow, with a lone magpie perched on a gate.',
-    imageUrl: './paintings/the-magpie.jpg',
+    imageUrl: './paintings/ash.jpg',
     dimensions: '89 x 130 cm',
-    medium: 'Oil on canvas',
+    medium: 'Charcoal on paper',
   },
   {
-    id: 'bridge-giverny',
-    title: 'The Japanese Bridge',
-    year: '1899',
+    id: 'face',
+    title: 'The Girl',
+    year: '-',
     description: 'Monet built the bridge himself in his garden at Giverny. He painted it dozens of times under different light conditions and seasonal shifts.',
     // Slideshow example with multiple views:
-    images: ['./paintings/japanese-bridge-1.jpg', './paintings/japanese-bridge-2.jpg'],
+    imageUrl: './paintings/face.jpg',
     dimensions: '81 x 100 cm',
-    medium: 'Oil on canvas',
+    medium: 'Charcoal on paper',
+  },
+  {
+    id: 'face',
+    title: 'The Other Girl',
+    year: '-',
+    description: 'Monet built the bridge himself in his garden at Giverny. He painted it dozens of times under different light conditions and seasonal shifts.',
+    // Slideshow example with multiple views:
+    imageUrl: './paintings/girl.jpg',
+    dimensions: '81 x 100 cm',
+    medium: 'Charcoal on paper',
+  },
+  {
+    id: 'hair',
+    title: 'The Hair Person',
+    year: '-',
+    description: 'Monet built the bridge himself in his garden at Giverny. He painted it dozens of times under different light conditions and seasonal shifts.',
+    // Slideshow example with multiple views:
+    imageUrl: './paintings/hair.jpg',
+    dimensions: '81 x 100 cm',
+    medium: 'Charcoal on paper',
   },
 ];
 
@@ -399,7 +431,9 @@ export default function App() {
       {/* ── HEADER ── */}
       <header className="relative z-50 flex justify-between items-center px-4 sm:px-8 md:px-12 py-4 sm:py-6 border-b border-white/10 bg-[#4a1111]/50 backdrop-blur-md">
         <div className="text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase opacity-70 font-sans flex items-center gap-2">
-          <span>🎨 MJKs Virtual Gallery</span>
+           <span>
+           <span className="text-lg mr-1">🎨</span> MJKs Virtual Gallery
+            </span>
         </div>
         <nav className="hidden md:flex gap-6 lg:gap-8 text-[10px] uppercase tracking-[0.2em] font-sans">
           <a href="#paintings" className="hover:text-[#e6c278] transition-colors">Exhibitions</a>
