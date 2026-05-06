@@ -50,7 +50,7 @@ const PAINTINGS: GalleryItem[] = [
     imageUrl: './paintings/karl.jpg',
     // Slideshow example (comment out imageUrl above and uncomment below):
     // images: ['./paintings/water-lilies-1.jpg', './paintings/water-lilies-2.jpg', './paintings/water-lilies-3.jpg'],
-    dimensions: '200 x 201 cm',
+    dimensions: 'A4',
     medium: 'Charcoal on paper',
   },
   {
@@ -62,7 +62,7 @@ const PAINTINGS: GalleryItem[] = [
     imageUrl: './paintings/turban.jpg',
     // Slideshow example (comment out imageUrl above and uncomment below):
     // images: ['./paintings/water-lilies-1.jpg', './paintings/water-lilies-2.jpg', './paintings/water-lilies-3.jpg'],
-    dimensions: '200 x 201 cm',
+    dimensions: 'A4',
     medium: 'Charcoal on paper',
   },
   {
@@ -71,7 +71,7 @@ const PAINTINGS: GalleryItem[] = [
     year: '-',
     description: 'This painting is credited with inspiring the name of the Impressionist movement. It depicts the port of Le Havre, Monet\'s hometown, at sunrise.',
     imageUrl: './paintings/ring.jpg',
-    dimensions: '48 x 63 cm',
+    dimensions: 'A4',
     medium: 'Charcoal on paper',
   },
   {
@@ -80,7 +80,7 @@ const PAINTINGS: GalleryItem[] = [
     year: '-',
     description: 'Also known as Madame Monet and Her Son, this painting captures a casual family moment on a breezy summer day.',
     imageUrl: './paintings/chimp.jpg',
-    dimensions: '100 x 81 cm',
+    dimensions: 'A4',
     medium: 'Charcoal on paper',
   },
   {
@@ -89,16 +89,16 @@ const PAINTINGS: GalleryItem[] = [
     year: '-',
     description: 'A glowing sunset view of the island monastery in Venice. Monet used a brilliant palette of yellows, oranges, and purples to capture the atmospheric light.',
     imageUrl: './paintings/walter.jpg',
-    dimensions: '65 x 92 cm',
+    dimensions: 'A4',
     medium: 'Charcoal on paper',
   },
   {
     id: 'ash',
     title: '2 Girls I think',
-    year: '1869',
+    year: '-',
     description: 'One of the first Impressionist snowscapes, Monet focuses on the interplay of light and shadow on the snow, with a lone magpie perched on a gate.',
     imageUrl: './paintings/ash.jpg',
-    dimensions: '89 x 130 cm',
+    dimensions: 'A4',
     medium: 'Charcoal on paper',
   },
   {
@@ -108,7 +108,7 @@ const PAINTINGS: GalleryItem[] = [
     description: 'Monet built the bridge himself in his garden at Giverny. He painted it dozens of times under different light conditions and seasonal shifts.',
     // Slideshow example with multiple views:
     imageUrl: './paintings/face.jpg',
-    dimensions: '81 x 100 cm',
+    dimensions: 'A4',
     medium: 'Charcoal on paper',
   },
   {
@@ -118,7 +118,7 @@ const PAINTINGS: GalleryItem[] = [
     description: 'Monet built the bridge himself in his garden at Giverny. He painted it dozens of times under different light conditions and seasonal shifts.',
     // Slideshow example with multiple views:
     imageUrl: './paintings/girl.jpg',
-    dimensions: '81 x 100 cm',
+    dimensions: 'A4',
     medium: 'Charcoal on paper',
   },
   {
@@ -146,7 +146,7 @@ const CLOTHING: ClothingItem[] = [
   },
   {
     id: 'scarf-sunrise',
-    title: 'Hoodie',
+    title: 'Hand-painted Hoodie',
     year: '2025',
     description: 'A flowing chiffon scarf printed with the warm palette of Impression, Sunrise. Versatile enough for everyday wear or special occasions.',
     images: ['./clothing/grey-hoodie.jpg','./clothing/black-hoodie.jpg'],
@@ -298,7 +298,7 @@ function PaintingModal({ item, onClose }: PaintingModalProps) {
         >
           <div className="bg-black/40 p-5 sm:p-8 md:p-14 rounded-sm border border-white/10 backdrop-blur-md shadow-2xl relative">
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#e6c278]/5 blur-3xl" />
-            <span className="text-[10px] tracking-[0.4em] uppercase text-[#e6c278] block mb-3 sm:mb-4 font-sans opacity-70">PERMANENT EXHIBITION</span>
+            <span className="text-[10px] tracking-[0.4em] uppercase text-[#e6c278] block mb-3 sm:mb-4 font-sans opacity-70">MJK'S GALLERY</span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display italic mb-2 text-[#e6c278] leading-tight">{item.title}</h2>
             <div className="h-px w-16 sm:w-24 bg-[#e6c278]/30 my-5 sm:my-10" />
             <p className="text-sm sm:text-base md:text-lg text-[#f4ece1]/90 leading-relaxed font-light italic">{item.description}</p>
