@@ -55,13 +55,11 @@ const PAINTINGS: GalleryItem[] = [
   },
   {
     id: 'Turban',
-    title: 'Turban Man',
+    title: 'Turban Guy',
     year: '-',
-    description: 'Part of the famous Nymphéas series, these paintings depict Monet\'s flower garden at Giverny. They were the main focus of his artistic production during the last thirty years of his life.',
+    description: '“Jal UThega Aapke Deeda-e-Tar Ka Hijaab” is a black-and-white charcoal painting that captures sorrow through soft shadows and rough textures. A figure with tearful eyes appears behind a veil of tradition, drawn with a mix of blurred and bold charcoal strokes that seem to dissolve into mere emotion. The contrast between deep black tones and pale highlights creates a feeling of silence and emotional weight. The veil of tradition symbolizes hidden feelings slowly being revealed, turning pain and vulnerability into a powerful moment of truth and human emotion.',
     // Single image example:
     imageUrl: './paintings/turban.jpg',
-    // Slideshow example (comment out imageUrl above and uncomment below):
-    // images: ['./paintings/water-lilies-1.jpg', './paintings/water-lilies-2.jpg', './paintings/water-lilies-3.jpg'],
     dimensions: 'A4',
     medium: 'Charcoal on paper',
   },
@@ -128,6 +126,56 @@ const PAINTINGS: GalleryItem[] = [
     description: 'Monet built the bridge himself in his garden at Giverny. He painted it dozens of times under different light conditions and seasonal shifts.',
     // Slideshow example with multiple views:
     imageUrl: './paintings/hair.jpg',
+    dimensions: '81 x 100 cm',
+    medium: 'Charcoal on paper',
+  },
+  {
+    id: 'flute',
+    title: 'The Flute Guy',
+    year: '-',
+    description: 'Monet built the bridge himself in his garden at Giverny. He painted it dozens of times under different light conditions and seasonal shifts.',
+    // Slideshow example with multiple views:
+    imageUrl: './paintings/flute.jpg',
+    dimensions: '81 x 100 cm',
+    medium: 'Oil on Canvas',
+  },
+  {
+    id: 'oldie',
+    title: 'Old Age',
+    year: '-',
+    description: 'Monet built the bridge himself in his garden at Giverny. He painted it dozens of times under different light conditions and seasonal shifts.',
+    // Slideshow example with multiple views:
+    imageUrl: './paintings/oldie.jpg',
+    dimensions: '81 x 100 cm',
+    medium: 'Charcoal on paper',
+  },
+  {
+    id: 'tree-lady',
+    title: 'The Tree Lady',
+    year: '-',
+    description: 'Monet built the bridge himself in his garden at Giverny. He painted it dozens of times under different light conditions and seasonal shifts.',
+    // Slideshow example with multiple views:
+    imageUrl: './paintings/tree-lady.jpg',
+    dimensions: '81 x 100 cm',
+    medium: 'Color on paper',
+  },
+  {
+    id: 'Tree',
+    title: 'Blue Tree',
+    year: '-',
+    description: 'Monet built the bridge himself in his garden at Giverny. He painted it dozens of times under different light conditions and seasonal shifts.',
+    // Slideshow example with multiple views:
+  images: ['./paintings/flow.jpg','./paintings/flow-1.jpg', './paintings/flow-2.jpg','./paintings/flow-3.jpg'],
+    dimensions: '81 x 100 cm',
+    medium: 'Charcoal on paper',
+  },
+  {
+    id: 'hijab',
+    title: 'REAL',
+    year: '-',
+    description: 'Monet built the bridge himself in his garden at Giverny. He painted it dozens of times under different light conditions and seasonal shifts.',
+    // Slideshow example with multiple views:
+    imageUrl: './paintings/hijab.jpg',
     dimensions: '81 x 100 cm',
     medium: 'Charcoal on paper',
   },
