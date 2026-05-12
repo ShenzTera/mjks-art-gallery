@@ -543,7 +543,7 @@ export default function App() {
       {/* ── PAINTINGS DIVIDER ── */}
       <div id="paintings" className="mt-14 sm:mt-24 md:mt-40 mb-8 sm:mb-12 md:mb-16 text-center max-w-7xl mx-auto px-4 sm:px-6 relative z-10 flex items-center gap-4 sm:gap-6">
         <div className="h-px flex-1 bg-white/5" />
-        <span className="text-[9px] sm:text-[10px] tracking-[0.4em] sm:tracking-[0.6em] uppercase text-[#e6c278]/50 font-sans whitespace-nowrap">Selected Works</span>
+        <span className="text-[9px] sm:text-[10px] tracking-[0.4em] sm:tracking-[0.6em] uppercase text-[#e6c278]/50 font-sans whitespace-nowrap"> Paintings </span>
         <div className="h-px flex-1 bg-white/5" />
       </div>
 
