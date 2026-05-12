@@ -42,94 +42,6 @@ interface ClothingItem {
 
 const PAINTINGS: GalleryItem[] = [
   {
-    id: 'karl',
-    title: 'Karl or something',
-    year: '-',
-    description: 'Part of the famous Nymphéas series, these paintings depict Monet\'s flower garden at Giverny. They were the main focus of his artistic production during the last thirty years of his life.',
-    // Single image example:
-    imageUrl: './paintings/karl.jpg',
-    // Slideshow example (comment out imageUrl above and uncomment below):
-    // images: ['./paintings/water-lilies-1.jpg', './paintings/water-lilies-2.jpg', './paintings/water-lilies-3.jpg'],
-    dimensions: 'A4',
-    medium: 'Charcoal on paper',
-  },
-  {
-    id: 'Turban',
-    title: 'Turban Guy',
-    year: '-',
-    description: '“Jal UThega Aapke Deeda-e-Tar Ka Hijaab” is a black-and-white charcoal painting that captures sorrow through soft shadows and rough textures. A figure with tearful eyes appears behind a veil of tradition, drawn with a mix of blurred and bold charcoal strokes that seem to dissolve into mere emotion. The contrast between deep black tones and pale highlights creates a feeling of silence and emotional weight. The veil of tradition symbolizes hidden feelings slowly being revealed, turning pain and vulnerability into a powerful moment of truth and human emotion.',
-    // Single image example:
-    imageUrl: './paintings/turban.jpg',
-    dimensions: 'A4',
-    medium: 'Charcoal on paper',
-  },
-  {
-    id: 'Ring',
-    title: 'The Ring',
-    year: '-',
-    description: 'This painting is credited with inspiring the name of the Impressionist movement. It depicts the port of Le Havre, Monet\'s hometown, at sunrise.',
-    imageUrl: './paintings/ring.jpg',
-    dimensions: 'A4',
-    medium: 'Charcoal on paper',
-  },
-  {
-    id: 'Chimp',
-    title: 'Chimpanze',
-    year: '-',
-    description: 'Also known as Madame Monet and Her Son, this painting captures a casual family moment on a breezy summer day.',
-    imageUrl: './paintings/chimp.jpg',
-    dimensions: 'A4',
-    medium: 'Charcoal on paper',
-  },
-  {
-    id: 'walter',
-    title: 'Breaking Bad',
-    year: '-',
-    description: 'A glowing sunset view of the island monastery in Venice. Monet used a brilliant palette of yellows, oranges, and purples to capture the atmospheric light.',
-    imageUrl: './paintings/walter.jpg',
-    dimensions: 'A4',
-    medium: 'Charcoal on paper',
-  },
-  {
-    id: 'ash',
-    title: '2 Girls I think',
-    year: '-',
-    description: 'One of the first Impressionist snowscapes, Monet focuses on the interplay of light and shadow on the snow, with a lone magpie perched on a gate.',
-    imageUrl: './paintings/ash.jpg',
-    dimensions: 'A4',
-    medium: 'Charcoal on paper',
-  },
-  {
-    id: 'face',
-    title: 'The Girl',
-    year: '-',
-    description: 'Monet built the bridge himself in his garden at Giverny. He painted it dozens of times under different light conditions and seasonal shifts.',
-    // Slideshow example with multiple views:
-    imageUrl: './paintings/face.jpg',
-    dimensions: 'A4',
-    medium: 'Charcoal on paper',
-  },
-  {
-    id: 'face',
-    title: 'The Other Girl',
-    year: '-',
-    description: 'Monet built the bridge himself in his garden at Giverny. He painted it dozens of times under different light conditions and seasonal shifts.',
-    // Slideshow example with multiple views:
-    imageUrl: './paintings/girl.jpg',
-    dimensions: 'A4',
-    medium: 'Charcoal on paper',
-  },
-  {
-    id: 'hair',
-    title: 'The Hair Person',
-    year: '-',
-    description: 'Monet built the bridge himself in his garden at Giverny. He painted it dozens of times under different light conditions and seasonal shifts.',
-    // Slideshow example with multiple views:
-    imageUrl: './paintings/hair.jpg',
-    dimensions: '81 x 100 cm',
-    medium: 'Charcoal on paper',
-  },
-  {
     id: 'flute',
     title: 'The Flute Guy',
     year: '-',
@@ -139,16 +51,7 @@ const PAINTINGS: GalleryItem[] = [
     dimensions: '81 x 100 cm',
     medium: 'Oil on Canvas',
   },
-  {
-    id: 'oldie',
-    title: 'Old Age',
-    year: '-',
-    description: 'Monet built the bridge himself in his garden at Giverny. He painted it dozens of times under different light conditions and seasonal shifts.',
-    // Slideshow example with multiple views:
-    imageUrl: './paintings/oldie.jpg',
-    dimensions: '81 x 100 cm',
-    medium: 'Charcoal on paper',
-  },
+  
   {
     id: 'tree-lady',
     title: 'The Tree Lady',
@@ -169,16 +72,119 @@ const PAINTINGS: GalleryItem[] = [
     dimensions: '81 x 100 cm',
     medium: 'Charcoal on paper',
   },
+  
+];
+// Add this around line 76
+const charcoalPaintings: GalleryItem[] = [
   {
     id: 'hijab',
     title: 'REAL',
     year: '-',
     description: 'Monet built the bridge himself in his garden at Giverny. He painted it dozens of times under different light conditions and seasonal shifts.',
     // Slideshow example with multiple views:
-    imageUrl: './paintings/hijab.jpg',
+    image: '/paintings/hijab.jpg',
     dimensions: '81 x 100 cm',
     medium: 'Charcoal on paper',
   },
+  {
+    id: 'oldie',
+    title: 'Old Age',
+    year: '-',
+    description: 'Monet built the bridge himself in his garden at Giverny. He painted it dozens of times under different light conditions and seasonal shifts.',
+    // Slideshow example with multiple views:
+    image: './paintings/oldie.jpg',
+    dimensions: '81 x 100 cm',
+    medium: 'Charcoal on paper',
+  },
+  {
+    id: 'karl',
+    title: 'Karl or something',
+    year: '-',
+    description: 'Part of the famous Nymphéas series, these paintings depict Monet\'s flower garden at Giverny. They were the main focus of his artistic production during the last thirty years of his life.',
+    // Single image example:
+    image: './paintings/karl.jpg',
+    // Slideshow example (comment out imageUrl above and uncomment below):
+    // images: ['./paintings/water-lilies-1.jpg', './paintings/water-lilies-2.jpg', './paintings/water-lilies-3.jpg'],
+    dimensions: 'A4',
+    medium: 'Charcoal on paper',
+  },
+  {
+    id: 'Turban',
+    title: 'Turban Guy',
+    year: '-',
+    description: '“Jal UThega Aapke Deeda-e-Tar Ka Hijaab” is a black-and-white charcoal painting that captures sorrow through soft shadows and rough textures. A figure with tearful eyes appears behind a veil of tradition, drawn with a mix of blurred and bold charcoal strokes that seem to dissolve into mere emotion. The contrast between deep black tones and pale highlights creates a feeling of silence and emotional weight. The veil of tradition symbolizes hidden feelings slowly being revealed, turning pain and vulnerability into a powerful moment of truth and human emotion.',
+    // Single image example:
+    image: './paintings/turban.jpg',
+    dimensions: 'A4',
+    medium: 'Charcoal on paper',
+  },
+  {
+    id: 'Ring',
+    title: 'The Ring',
+    year: '-',
+    description: 'This painting is credited with inspiring the name of the Impressionist movement. It depicts the port of Le Havre, Monet\'s hometown, at sunrise.',
+    image: './paintings/ring.jpg',
+    dimensions: 'A4',
+    medium: 'Charcoal on paper',
+  },
+  {
+    id: 'Chimp',
+    title: 'Chimpanze',
+    year: '-',
+    description: 'Also known as Madame Monet and Her Son, this painting captures a casual family moment on a breezy summer day.',
+    image: './paintings/chimp.jpg',
+    dimensions: 'A4',
+    medium: 'Charcoal on paper',
+  },
+  {
+    id: 'walter',
+    title: 'Breaking Bad',
+    year: '-',
+    description: 'A glowing sunset view of the island monastery in Venice. Monet used a brilliant palette of yellows, oranges, and purples to capture the atmospheric light.',
+    image: './paintings/walter.jpg',
+    dimensions: 'A4',
+    medium: 'Charcoal on paper',
+  },
+  {
+    id: 'ash',
+    title: '2 Girls I think',
+    year: '-',
+    description: 'One of the first Impressionist snowscapes, Monet focuses on the interplay of light and shadow on the snow, with a lone magpie perched on a gate.',
+    image: './paintings/ash.jpg',
+    dimensions: 'A4',
+    medium: 'Charcoal on paper',
+  },
+  {
+    id: 'face',
+    title: 'The Girl',
+    year: '-',
+    description: 'Monet built the bridge himself in his garden at Giverny. He painted it dozens of times under different light conditions and seasonal shifts.',
+    // Slideshow example with multiple views:
+    image: './paintings/face.jpg',
+    dimensions: 'A4',
+    medium: 'Charcoal on paper',
+  },
+  {
+    id: 'face',
+    title: 'The Other Girl',
+    year: '-',
+    description: 'Monet built the bridge himself in his garden at Giverny. He painted it dozens of times under different light conditions and seasonal shifts.',
+    // Slideshow example with multiple views:
+    image: './paintings/girl.jpg',
+    dimensions: 'A4',
+    medium: 'Charcoal on paper',
+  },
+  {
+    id: 'hair',
+    title: 'The Hair Person',
+    year: '-',
+    description: 'Monet built the bridge himself in his garden at Giverny. He painted it dozens of times under different light conditions and seasonal shifts.',
+    // Slideshow example with multiple views:
+    image: './paintings/hair.jpg',
+    dimensions: '81 x 100 cm',
+    medium: 'Charcoal on paper',
+  },
+
 ];
 
 const CLOTHING: ClothingItem[] = [
@@ -206,11 +212,18 @@ const CLOTHING: ClothingItem[] = [
 // ─────────────────────────────────────────────
 // HELPERS
 // ─────────────────────────────────────────────
-
 /** Returns the resolved images array from an item (supports single or multi) */
-function getImages(item: GalleryItem | ClothingItem): string[] {
+function getImages(item: any): string[] {
+  // 1. First, check if there is an array of images (for slideshows)
   if (item.images && item.images.length > 0) return item.images;
+
+  // 2. Next, check for 'image' (used in your Charcoal data)
+  if (item.image) return [item.image];
+
+  // 3. Then, check for 'imageUrl' (used in your Oil Paintings data)
   if (item.imageUrl) return [item.imageUrl];
+
+  // 4. Fallback if no images are found
   return ['./placeholder.jpg'];
 }
 
@@ -572,6 +585,47 @@ export default function App() {
           );
         })}
       </section>
+{/* NEW: Charcoal Section - Insert around Line 160 */}
+{/* --- CHARCOAL SECTION START --- */}
+<section className="mt-16 sm:mt-20 md:mt-32 px-4 sm:px-8 md:px-12 max-w-7xl mx-auto">
+  <div className="flex items-center gap-4 mb-8 sm:mb-12">
+    <div className="h-[1px] flex-1 bg-white/10"></div>
+    <h2 className="text-[#e6c278] font-sans tracking-[0.4em] uppercase text-[10px] opacity-80">
+      Charcoal & Sketch
+    </h2>
+    <div className="h-[1px] flex-1 bg-white/10"></div>
+  </div>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-16">
+    {charcoalPaintings.map((painting, index) => (
+      <motion.div
+        key={painting.id}
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: index * 0.1, duration: 0.8 }}
+        onClick={() => setActivePainting(painting)}
+        className="group cursor-pointer"
+      >
+        <div className="gold-frame transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_45px_90px_-25px_rgba(0,0,0,0.9)] relative">
+          <div className="bg-black overflow-hidden aspect-[4/5]">
+            <img 
+              src={painting.image} 
+              alt={painting.title}
+              loading="lazy"
+              className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-1000"
+            />
+          </div>
+        </div>
+        <div className="mt-4 text-center">
+          <h3 className="text-base sm:text-lg md:text-xl font-display text-[#e6c278] italic tracking-wide group-hover:text-white transition-colors">{painting.title}</h3>
+          <p className="text-[#e6c278]/60 text-[9px] tracking-[0.2em] uppercase mt-2">{painting.medium}</p>
+        </div>
+      </motion.div>
+    ))}
+  </div>
+</section>
+{/* --- CHARCOAL SECTION END --- */}
 
       {/* ── CLOTHING DIVIDER ── */}
       <div id="clothing" className="mt-20 sm:mt-32 md:mt-48 mb-8 sm:mb-12 md:mb-16 text-center max-w-7xl mx-auto px-4 sm:px-6 relative z-10 flex items-center gap-4 sm:gap-6">
@@ -625,6 +679,7 @@ export default function App() {
           })}
         </div>
       </section>
+      
 
       {/* ── CONTACT ── */}
       <section className="mt-20 sm:mt-32 md:mt-48 px-4 sm:px-8 md:px-12 max-w-7xl mx-auto relative z-10" id="contact">
